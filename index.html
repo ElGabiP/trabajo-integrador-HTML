@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es-419">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dónde Vamos - Tu buscador de actividades</title>
+    <meta
+      name="description"
+      content="Codo a Codo 4.0 - Curso de PHP - Front End - Comisión 24143 - Trabajo Práctico Integrador - Práctica de HTML y CSS" />
+    <meta name="author" content="Gabriel Pescio" />
+    <link rel="stylesheet" href="css/estilos.css" />
+
+    <meta
+      name="theme-color"
+      content="#4CAF50"
+      media="(prefers-color-scheme: light)" />
+    <meta
+      name="theme-color"
+      content="#388E3C"
+      media="(prefers-color-scheme: dark)" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <link rel="icon" sizes="192x192" href="android-chrome-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <script
+      src="https://kit.fontawesome.com/0b53f15498.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navegacion">
+        <a class="anclaLogo" href="#">
+          <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+          <span>DÓNDE VAMOS</span>
+        </a>
+        <ul class="listaNav">
+          <li class="listaItem">
+            <a class="linkNav" href="#tendencias">Tendencias</a>
+          </li>
+          <li class="listaItem">
+            <a class="linkNav" href="./pages/registrarse.html">Registrarse</a>
+          </li>
+          <li class="listaItem">
+            <a class="linkNav iniciarSesion" href="./pages/iniciosesion.html"
+              >Iniciar Sesión</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="main">
+      <section class="seccionPrincipal">
+        <h1 class="tituloPrincipal">
+          Tu próximo plan está a un clic de distancia.
+        </h1>
+        <h2 class="subtituloPrincipal">
+          Averiguá las opciones cercanas para disfrutar con quien quieras. ¡Armá
+          tu salida ya!
+        </h2>
+      </section>
+
+      <section class="buscadorPrincipal">
+        <h2 class="tituloSection">¿Qué querés hacer hoy?</h2>
+        <form id="salidaBuscada" class="buscadorEventos">
+          <input
+            class="inputBuscador"
+            type="text"
+            placeholder="Escribí qué actividad estás buscando para salir..."
+            id="buscar"
+            name="buscar"
+            minlength="4"
+            maxlength="60"
+            list="actividadesSugeridas"
+            required
+            autofocus />
+          <datalist id="actividadesSugeridas">
+            <option>Cena para dos</option>
+            <option>Paseo para toda la familia</option>
+            <option>Tomar un trago con amigues</option>
+            <option>Comida mexicana</option>
+            <option>Sushi</option>
+            <option>Baile de cuarteto</option>
+            <option>Música electrónica</option>
+            <option>Recitales al aire libre</option>
+            <option>Restaurante cinco tenedores</option>
+            <option>Merendar</option>
+            <option>Tomar unos mates</option>
+          </datalist>
+
+          <select
+            name="tipoSalida"
+            id="tipoSalida"
+            form="salidaBuscada"
+            class="seleccionSalida">
+            <option value="bebida">Para tomar</option>
+            <option value="evento" selected>Eventos</option>
+            <option value="baile">Bailables</option>
+            <option value="comida">Para comer</option>
+          </select>
+
+          <input class="botonBuscador" type="submit" value="Buscar" />
+        </form>
+      </section>
+
+      <section id="tendencias" class="seccionTendencias">
+        <h2 class="tituloSeccion">Hoy en tu ciudad</h2>
+        <div class="contenedorEventos" id="eventos">
+          <div class="eventoDestacado" id="destacado">
+            <a href="./pages/cantando.html" title="Cantando por un huevo"
+              ><img
+                src="./assets/img/salidas/cantando-por-un-huevo.jpg"
+                alt="Cantando por un huevo"
+                loading="lazy"
+            /></a>
+          </div>
+        </div>
+
+        <h2 class="tituloSeccion">También te recomendamos</h2>
+
+        <div class="contenedorRecomendaciones" id="recomendaciones">
+          <div class="actividadRecomendada">
+            <a href="./pages/cantando.html"
+              ><img
+                src="./assets/img/salidas/cantando-por-un-huevo.jpg"
+                alt="Cantando por un huevo"
+                loading="lazy" />
+              <div class="nombreActividad">
+                <h3>Cantando por un huevo</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="actividadRecomendada">
+            <a href="./pages/arre.html"
+              ><img
+                src="./assets/img/salidas/arre-barra-taquera.jpg"
+                alt="Arre Barra Taquera"
+                loading="lazy" />
+              <div class="nombreActividad">
+                <h3>Arre Barra Taquera</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="actividadRecomendada">
+            <a href="./pages/kike.html"
+              ><img
+                src="./assets/img/salidas/bodeguita-de-kike.jpg"
+                alt="La Bodeguita de Kike"
+                loading="lazy" />
+              <div class="nombreActividad">
+                <h3>La Bodeguita de Kike</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="actividadRecomendada">
+            <a href="./pages/botanico.html"
+              ><img
+                src="./assets/img/salidas/jardin-botanico.jpg"
+                alt="Jardín Botánico de Córdoba"
+                loading="lazy" />
+              <div class="nombreActividad">
+                <h3>Jardín Botánico de Córdoba</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="actividadRecomendada">
+            <a href="./pages/nakama.html"
+              ><img
+                src="./assets/img/salidas/nakama-ramen.jpg"
+                alt="NA•KA•MA – ʀᴀᴍᴇɴ ᴄᴏʀɴᴇʀ"
+                loading="lazy" />
+              <div class="nombreActividad">
+                <h3>NA•KA•MA – ʀᴀᴍᴇɴ ᴄᴏʀɴᴇʀ</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Hecha con <i class="fa-solid fa-brain"></i> y
+        <i class="fa-solid fa-heart"></i> por Gabriel Pescio.
+      </p>
+      <nav>
+        <ul>
+          <li><a href="">Quiénes somos</a></li>
+          <li><a href="">Preguntas frecuentes</a></li>
+          <li><a href="">Ayuda</a></li>
+          <li><a href="">Administrador Página</a></li>
+        </ul>
+      </nav>
+      <a href="#main" class="flechaArriba" title="Volver al inicio">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </footer>
+  </body>
+</html>

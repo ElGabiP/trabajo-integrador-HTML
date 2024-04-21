@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es-419">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Inicio de sesión | Dónde Vamos - Tu buscador de actividades</title>
+    <meta
+      name="description"
+      content="Codo a Codo 4.0 - Curso de PHP - Front End - Comisión 24143 - Trabajo Práctico Integrador - Práctica de HTML y CSS" />
+    <meta name="author" content="Gabriel Pescio" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <meta
+      name="theme-color"
+      content="#4CAF50"
+      media="(prefers-color-scheme: light)" />
+    <meta
+      name="theme-color"
+      content="#388E3C"
+      media="(prefers-color-scheme: dark)" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <link rel="icon" sizes="192x192" href="../android-chrome-192x192.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png" />
+    <link rel="manifest" href="../site.webmanifest" />
+
+    <script
+      src="https://kit.fontawesome.com/0b53f15498.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navegacion">
+        <a class="anclaLogo" href="../index.html">
+          <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+          <span>DÓNDE VAMOS</span>
+        </a>
+        <ul class="listaNav">
+          <li class="listaItem">
+            <a class="linkNav" href="../index.html#tendencias">Tendencias</a>
+          </li>
+          <li class="listaItem">
+            <a class="linkNav" href="../pages/registrarse.html">Registrarse</a>
+          </li>
+          <li class="listaItem">
+            <a class="linkNav iniciarSesion" href="../pages/iniciosesion.html"
+              >Iniciar Sesión</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="mainIngreso">
+      <section class="seccionLogin">
+        <form action="" method="get" name="login">
+          <h2>¡Hola de nuevo!</h2>
+          <fieldset>
+            <legend>Ingresá tus datos</legend>
+            <div>
+              <input
+                type="email"
+                placeholder="Tu e-mail de registro"
+                id="email"
+                name="email" />
+            </div>
+            <div>
+              <input
+                type="password"
+                placeholder="Tu contraseña"
+                id="password"
+                name="password" />
+            </div>
+            <div class="botonLogin">
+              <input class="login" type="submit" value="Iniciar Sesión" />
+            </div>
+            <div id="ayuda" class="ayuda">
+              <a href="registrarse.html">Registrate acá</a>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Hecha con <i class="fa-solid fa-brain"></i> y
+        <i class="fa-solid fa-heart"></i> por Gabriel Pescio.
+      </p>
+      <nav>
+        <ul>
+          <li><a href="">Quiénes somos</a></li>
+          <li><a href="">Preguntas frecuentes</a></li>
+          <li><a href="">Ayuda</a></li>
+          <li><a href="">Administrador Página</a></li>
+        </ul>
+      </nav>
+      <a href="#main" class="flechaArriba" title="Volver al inicio">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </footer>
+  </body>
+</html>
