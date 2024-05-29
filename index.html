@@ -7,7 +7,7 @@
     <title>Dónde Vamos - Tu buscador de actividades</title>
     <meta
       name="description"
-      content="Codo a Codo 4.0 - Curso de PHP - Front End - Comisión 24143 - Trabajo Práctico Integrador - Práctica de HTML y CSS" />
+      content="Codo a Codo 4.0 - Curso de PHP - Front End - Comisión 24143 - Trabajo Práctico Integrador - Práctica de HTML, CSS y JS" />
     <meta name="author" content="Gabriel Pescio" />
     <link rel="stylesheet" href="css/estilos.css" />
 
@@ -113,6 +113,39 @@
         </form>
       </section>
 
+      <section class="widgetTiempo">
+        <div class="widget">
+          <div>
+            <span
+              class="tituloWidget"
+              title="Datos obtenidos de la API OpenWeather">
+              El tiempo en
+            </span>
+            <span id="ciudad"></span>:
+            <span id="tiempo"></span>
+            <img id="tiempoIcono" src=" " alt="" />
+          </div>
+          <div>
+            <span
+              class="textoResponsivo"
+              texto-escritorio="Temperatura: "
+              texto-movil="T.: "
+              id="temperatura"></span>
+            °C
+          </div>
+          <div>
+            <span
+              class="textoResponsivo"
+              texto-escritorio="Humedad: "
+              texto-movil="H.: "
+              id="humedad"></span
+            >%
+          </div>
+
+          <div id="tiempoRecomendacion"></div>
+        </div>
+      </section>
+
       <section id="tendencias" class="seccionTendencias">
         <h2 class="tituloSeccion">Hoy en tu ciudad</h2>
         <div class="contenedorEventos" id="eventos">
@@ -209,5 +242,6 @@
         <i class="fa-solid fa-arrow-up"></i>
       </a>
     </footer>
+    <script src="./js/widget-tiempo.js"></script>
   </body>
 </html>
