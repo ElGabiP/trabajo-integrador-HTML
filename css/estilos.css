@@ -1128,6 +1128,24 @@ body {
       margin-bottom: var(--xl);
     }
 
+    .mensaje-error {
+      color: var(--color-acento);
+      font-size: var(--small);
+      font-weight: var(--bold);
+      margin-top: -1ch;
+      margin-bottom: 15px;
+    }
+
+    .es-invalido {
+      border: 1px solid var(--color-acento) !important;
+      box-shadow: 0 0 10px var(--color-acento);
+    }
+
+    .es-valido {
+      border: 1px solid var(--color-primario) !important;
+      box-shadow: 0 0 10px var(--color-primario);
+    }
+
     fieldset {
       border: 1px solid var(--color-secundario);
       border-radius: 0.5rem;

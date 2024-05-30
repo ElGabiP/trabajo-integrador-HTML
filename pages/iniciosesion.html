@@ -7,9 +7,16 @@
     <title>Inicio de sesión | Dónde Vamos - Tu buscador de actividades</title>
     <meta
       name="description"
-      content="Codo a Codo 4.0 - Curso de PHP - Front End - Comisión 24143 - Trabajo Práctico Integrador - Práctica de HTML y CSS" />
+      content="Codo a Codo 4.0 - Curso de PHP - Front End - Comisión 24143 - Trabajo Práctico Integrador - Práctica de HTML, CSS y JS" />
     <meta name="author" content="Gabriel Pescio" />
     <link rel="stylesheet" href="../css/estilos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+      rel="stylesheet" />
+
     <meta
       name="theme-color"
       content="#4CAF50"
@@ -45,6 +52,7 @@
     <script
       src="https://kit.fontawesome.com/0b53f15498.js"
       crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -71,7 +79,7 @@
 
     <main id="main" class="mainIngreso">
       <section class="seccionLogin">
-        <form action="" method="get" name="login">
+        <form id="loginForm" action="" method="get" name="login">
           <h2>¡Hola de nuevo!</h2>
           <fieldset>
             <legend>Ingresá tus datos</legend>
@@ -80,14 +88,18 @@
                 type="email"
                 placeholder="Tu e-mail de registro"
                 id="email"
-                name="email" />
+                name="email"
+                class="form-control" />
+              <div id="emailError" class="mensaje-error"></div>
             </div>
             <div>
               <input
                 type="password"
                 placeholder="Tu contraseña"
                 id="password"
-                name="password" />
+                name="password"
+                class="form-control" />
+              <div id="passwordError" class="mensaje-error"></div>
             </div>
             <div class="botonLogin">
               <input class="login" type="submit" value="Iniciar Sesión" />
@@ -117,5 +129,6 @@
         <i class="fa-solid fa-arrow-up"></i>
       </a>
     </footer>
+    <script src="../js/validacion-iniciosesion.js"></script>
   </body>
 </html>
