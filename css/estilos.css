@@ -860,11 +860,11 @@ body {
   background: linear-gradient(to bottom, #4caf5088, var(--color-fondo)),
     url(../assets/img/bg-image-registro.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: top;
   background-repeat: no-repeat;
 
   .seccionRegistro {
-    min-width: 50svw;
+    width: 55svw;
     padding: 30px;
     border-radius: var(--normal);
     box-shadow: 0 0 10px var(--color-sombra);
@@ -882,6 +882,25 @@ body {
       border-radius: 0.5rem;
       padding: 15px;
       margin: 0;
+
+      .mensaje-error {
+        color: var(--color-acento);
+        line-height: 1.4;
+        font-size: var(--small);
+        font-weight: var(--bold);
+        margin-top: -15px;
+        margin-bottom: 15px;
+      }
+
+      .es-invalido {
+        border: 1px solid var(--color-acento) !important;
+        box-shadow: 0 0 10px var(--color-acento);
+      }
+
+      .es-valido {
+        border: 1px solid var(--color-primario) !important;
+        box-shadow: 0 0 10px var(--color-primario);
+      }
 
       legend {
         font-weight: var(--bold);
@@ -936,9 +955,19 @@ body {
 
     .terminos {
       display: flex;
-      align-items: center;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 1ch;
       margin: 30px 0px;
+      .terminos-check {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        margin-left: 15px;
+      }
       input[type="checkbox"] {
+        height: var(--small);
         margin-right: 1ch;
       }
     }
@@ -982,7 +1011,7 @@ body {
 
     .botoneraRegistro {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
       margin: 15px 0px;
       .botonRegistro,
       .botonReseteo {
@@ -1046,7 +1075,7 @@ body {
 @media only screen and (max-width: 768px) {
   .mainRegistro {
     .seccionRegistro {
-      max-width: 90svw;
+      width: 90svw;
 
       h2 {
         font-size: var(--xl);
@@ -1079,7 +1108,7 @@ body {
         .botoneraRegistro {
           flex-flow: column;
           align-items: center;
-          gap: 1ch;
+          gap: 15px;
 
           .botonRegistro,
           .botonReseteo {

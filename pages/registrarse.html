@@ -7,9 +7,15 @@
     <title>Página de Registro | Dónde Vamos - Tu buscador de actividades</title>
     <meta
       name="description"
-      content="Codo a Codo 4.0 - Curso de PHP - Front End - Comisión 24143 - Trabajo Práctico Integrador - Práctica de HTML y CSS" />
+      content="Codo a Codo 4.0 - Curso de PHP - Front End - Comisión 24143 - Trabajo Práctico Integrador - Práctica de HTML, CSS y JS" />
     <meta name="author" content="Gabriel Pescio" />
     <link rel="stylesheet" href="../css/estilos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+      rel="stylesheet" />
     <meta
       name="theme-color"
       content="#4CAF50"
@@ -45,6 +51,7 @@
     <script
       src="https://kit.fontawesome.com/0b53f15498.js"
       crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -72,7 +79,7 @@
     <main id="main" class="mainRegistro">
       <section class="seccionRegistro">
         <h2>Registrate ya</h2>
-        <form action="" method="get" name="registro">
+        <form id="regForm" action="" method="get" name="registro">
           <fieldset>
             <legend>Ingresá tu información personal</legend>
 
@@ -82,8 +89,9 @@
                 placeholder="Nombre"
                 id="nombre"
                 name="nombre"
-                minlength="4"
+                class="form-control"
                 required />
+              <div id="nombreError" class="mensaje-error"></div>
             </div>
             <div>
               <input
@@ -91,8 +99,9 @@
                 placeholder="Apellido"
                 id="apellido"
                 name="apellido"
+                class="form-control"
                 required />
-              <div class="error-text"></div>
+              <div id="apellidoError" class="mensaje-error"></div>
             </div>
             <div>
               <input
@@ -100,8 +109,9 @@
                 placeholder="E-mail"
                 id="email"
                 name="email"
+                class="form-control"
                 required />
-              <div class="error-text"></div>
+              <div id="emailError" class="mensaje-error"></div>
             </div>
             <div>
               <input
@@ -109,9 +119,11 @@
                 placeholder="Elegí una contraseña"
                 id="password"
                 name="password"
+                class="form-control"
                 minlength="6"
                 maxlength="16"
                 required />
+              <div id="passwordError" class="mensaje-error"></div>
             </div>
             <div>
               <input
@@ -119,14 +131,22 @@
                 placeholder="Repetí tu contraseña"
                 id="password2"
                 name="password2"
+                class="form-control"
                 minlength="6"
                 maxlength="16"
                 required />
+              <div id="password2Error" class="mensaje-error"></div>
             </div>
 
             <label for="fechaNacimiento">Fecha de nacimiento: </label>
             <div>
-              <input type="date" id="fechaNacimiento" name="fechaNacimiento" />
+              <input
+                type="date"
+                id="fechaNacimiento"
+                name="fechaNacimiento"
+                class="form-control"
+                required />
+              <div id="fechaNacimientoError" class="mensaje-error"></div>
             </div>
             <div class="registroGenero">
               <fieldset>
@@ -192,7 +212,7 @@
               </datalist>
             </div>
             <div>
-              <select id="provincia">
+              <select id="provincia" class="form-control" required>
                 <option value="1">BUENOS AIRES</option>
                 <option value="50">C.A.B.A.</option>
                 <option value="2">CATAMARCA</option>
@@ -217,13 +237,22 @@
                 <option value="22">TIERRA DEL FUEGO</option>
                 <option disabled selected value="">Provincia</option>
               </select>
+              <div id="provinciaError" class="mensaje-error"></div>
             </div>
             <div class="terminos">
-              <input class="check" type="checkbox" id="terminos" required />
-              <label class="terminosCheck" for="terminos"
-                >Acepto los <a href="#">términos y condiciones</a>.</label
-              >
+              <div class="terminos-check">
+                <input
+                  class="check form-control"
+                  type="checkbox"
+                  id="terminos"
+                  required />
+                <label class="terminosCheck" for="terminos"
+                  >Acepto los <a href="#">términos y condiciones</a>.</label
+                >
+              </div>
+              <div id="terminosError" class="mensaje-error"></div>
             </div>
+
             <div class="botoneraRegistro">
               <input class="botonRegistro" type="submit" value="Registrarme" />
 
@@ -254,5 +283,6 @@
         <i class="fa-solid fa-arrow-up"></i>
       </a>
     </footer>
+    <script src="../js/validacion-registro.js"></script>
   </body>
 </html>
