@@ -132,7 +132,7 @@ body {
       .listaNav {
         position: fixed;
         bottom: 0;
-        min-height: calc(8vh + 5px);
+        min-height: calc(8vmax + 5px);
         min-width: 100vw;
         background-color: var(--color-primario);
         box-shadow: 0 0 10px var(--color-sombra);
